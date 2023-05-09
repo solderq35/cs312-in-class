@@ -1,5 +1,5 @@
-# package-checker
-HW for CS312 class
+# Shell Package Checker
+CS312 In Class Activity
 
 ## Commands
 `chmod +x snap_check.sh`

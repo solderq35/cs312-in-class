@@ -1,0 +1,15 @@
+---
+- name: Install zsh on all hosts
+  hosts: all
+  tasks:
+    - name: Read package names from YAML file
+      include_vars:
+        file: packages.yaml
+        name: packages
+
+    - name: Install packages
+      apt:
+        name: "{{ packages.zsh }}"
+        state: present
+        update_cache: true
+      become: true
